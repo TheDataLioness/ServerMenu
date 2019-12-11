@@ -5,6 +5,10 @@ declare(strict_types=1);
 namespace DataLion\ServerMenu;
 
 
+
+
+
+
 use jojoe77777\FormAPI\SimpleForm;
 use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
@@ -50,11 +54,18 @@ class Main extends PluginBase{
 			    if($sender instanceof Player){
                     $this->serverMenu($sender);
                 }
+
+
 				return true;
 			default:
 				return false;
 		}
 	}
+
+
+
+
+
 
 	public function onDisable() : void{
 		$this->getLogger()->info("Disabled");
@@ -83,7 +94,7 @@ class Main extends PluginBase{
 
 
                         $server = $this->config->get("servers")[$data];
-                        $player->transfer($server["ip"], $server["port"], $server["name"]);
+                        $player->transfer($server["ip"], intval($server["port"]), $server["name"]);
                         return;
 
 
