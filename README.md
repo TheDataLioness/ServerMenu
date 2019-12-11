@@ -1,1 +1,3 @@
-"# ServerMenu" 
+# ServerMenu
+
+Edit Servers in config.yml
