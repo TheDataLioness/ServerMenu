@@ -1,0 +1,21 @@
+name: ServerMenu
+main: DataLion\ServerMenu\Main
+version: 0.0.1
+api: 3.9.8
+author: DataLion
+
+description: Server Transfer Menu
+
+website: https://github.com/pmmp/PocketMine-DevTools
+
+commands:
+ servermenu:
+  description: Server menu main command.
+  usage: /servermenu
+  permission: servermenu.command
+  aliases: ["serverm", "smenu"]
+
+permissions:
+ servermenu.command:
+  description: Server menu main permission
+  default: true
