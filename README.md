@@ -1,3 +1,6 @@
+[![](https://poggit.pmmp.io/shield.state/ServerMenu)](https://poggit.pmmp.io/p/ServerMenu)
+
+
 # ServerMenu
 
 
