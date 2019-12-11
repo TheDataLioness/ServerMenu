@@ -6,7 +6,10 @@ author: DataLion
 
 description: Server Transfer Menu
 
-website: https://github.com/pmmp/PocketMine-DevTools
+depend:
+  - FormAPI
+
+website: https://github.com/DataLiontje/ServerMenu
 
 commands:
  servermenu:
