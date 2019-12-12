@@ -6,8 +6,6 @@ author: DataLion
 
 description: Server Transfer Menu
 
-depend:
-  - FormAPI
 
 website: https://github.com/DataLiontje/ServerMenu
 
