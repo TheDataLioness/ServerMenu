@@ -1,6 +1,6 @@
 name: ServerMenu
 main: DataLion\ServerMenu\Main
-version: 0.0.1
+version: 1.0.0
 api: 3.9.8
 author: DataLion
 
