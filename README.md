@@ -1,3 +1,6 @@
+[![](https://poggit.pmmp.io/shield.state/ServerMenu)](https://poggit.pmmp.io/p/ServerMenu)
+
+
 # ServerMenu
 
 
@@ -9,8 +12,5 @@ Edit Servers in config.yml (config.yml will be created on plugin startup)
 ## Usage:
 ### Commands:
       /servermenu
-
-
-
-## Usage in other plugins:
-  Get the main class and call the serverMenu(Player $player) function.
+## Call from other plugin:
+  Call the serverMenu() function from the main class.
