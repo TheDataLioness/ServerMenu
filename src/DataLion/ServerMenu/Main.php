@@ -18,10 +18,20 @@ use pocketmine\utils\Config;
 
 class Main extends PluginBase{
 
-    private $config;
-
+    	private $config;
+	public static $instance;
+	
+	public static function getInstance(): Main
+	{
+		return self::$instance;
+	}
+	
+	
 
 	public function onEnable() : void{
+		
+	
+		
 		$this->getLogger()->info("Enabled");
 
 
@@ -43,7 +53,7 @@ class Main extends PluginBase{
 
 
 		$this->config = new Config($this->getDataFolder()."config.yml", Config::YAML, $standard_vals);
-
+		self::$instance = $this;
 
 
 	}
@@ -76,9 +86,9 @@ class Main extends PluginBase{
 
 
 
-	public function serverMenu(Player $player): void{
+	public static function serverMenu(Player $player): void{
         $options = array();
-        foreach($this->config->get("servers") as $server){
+        foreach(self::getInstance()->config->get("servers") as $server){
             $options[] = $server["name"];
         }
 
@@ -93,7 +103,7 @@ class Main extends PluginBase{
                     if (is_int($data)) {
 
 
-                        $server = $this->config->get("servers")[$data];
+                        $server = self::getInstance()->config->get("servers")[$data];
                         $player->transfer($server["ip"], intval($server["port"]), $server["name"]);
                         return;
 
@@ -105,7 +115,7 @@ class Main extends PluginBase{
         });
         $form->setTitle("Server Selection");
         $form->setContent($text);
-        foreach($this->config->get("servers") as $server){
+        foreach(self::getInstance()->config->get("servers") as $server){
             $form->addButton($server["name"]);
         }
         $player->sendForm($form);
